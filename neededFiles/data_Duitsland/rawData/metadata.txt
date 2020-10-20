@@ -1,0 +1,14 @@
+fileName	cell	condition
+SN_1	mac	sciaticNerve
+SN_2	mac	sciaticNerve
+SN_3	mac	sciaticNerve
+SN_4	mac	sciaticNerve
+ON_1	mac	opticNerve
+ON_2	mac	opticNerve
+ON_3	mac	opticNerve
+ON_4	mac	opticNerve
+SPF_1	mac	brain
+SPF_2	mac	brain
+SPF_3	mac	brain
+SPF_4	mac	brain
+SPF_5	mac	brain
