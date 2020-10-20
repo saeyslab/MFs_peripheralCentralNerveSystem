@@ -617,13 +617,7 @@ myColorPalette<-c("#1c6ab0", "#1f6db1", "#2372b4", "#2675b6", "#2a79b8", "#2e7eb
 ##### Needed genes #####
 ## 3. top 20 DEgenes
 ###Remove ActD genes. From Van Hove et al. Nature Neuroscience. 2019
-DEgenes_exp1<-readRDS(file="/path/to/JP30-JP31/Robjects/listDEgenes.rds")
-DEgenes_exp2<-readRDS(file="/path/to/JP32-JP33/Robjects/listDEgenes.rds")
-tmp<-DEgenes_exp1$JP31_vs_JP30
-DEgenes_exp1<-as.character(tmp[tmp$avg_logFC > 0,which(colnames(tmp)=="gene")])
-tmp<-DEgenes_exp2$JP33_vs_JP32
-DEgenes_exp2<-as.character(tmp[tmp$avg_logFC > 0,which(colnames(tmp)=="gene")])
-dissociationGenes<-intersect(DEgenes_exp1,DEgenes_exp2)
+dissociationGenes<-read.table(file="neededFiles/dissociationGenes.txt")[,1]
 length(dissociationGenes)
 # 224
 

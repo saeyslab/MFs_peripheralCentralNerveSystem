@@ -320,13 +320,7 @@ seuratObjFirst<-seuratObj
 ########## DETECT THE CELLS AFFECTED BY DISSOCIATION
 ################################################################################
 ###Remove ActD genes. From Van Hove et al. Nature Neuroscience. 2019
-DEgenes_exp1<-readRDS(file="/home/liesbetm/Documents/Projects/extern_collab/KiavashMovahedi/singleCell_exp2836_revision/JP30-JP31/Robjects/listDEgenes.rds")
-DEgenes_exp2<-readRDS(file="/home/liesbetm/Documents/Projects/extern_collab/KiavashMovahedi/singleCell_exp2836_revision/JP32-JP33/Robjects/listDEgenes.rds")
-tmp<-DEgenes_exp1$JP31_vs_JP30
-DEgenes_exp1<-as.character(tmp[tmp$avg_logFC > 0,which(colnames(tmp)=="gene")])
-tmp<-DEgenes_exp2$JP33_vs_JP32
-DEgenes_exp2<-as.character(tmp[tmp$avg_logFC > 0,which(colnames(tmp)=="gene")])
-dissociationGenes<-intersect(DEgenes_exp1,DEgenes_exp2)
+dissociationGenes<-read.table(file="neededFiles/dissociationGenes.txt")[,1]
 length(dissociationGenes)
 # 224
 
